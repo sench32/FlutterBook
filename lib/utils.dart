@@ -6,7 +6,7 @@
 import "dart:io";
 import "package:flutter/material.dart";
 import "package:intl/intl.dart";
-// import "BaseModel.dart";
+import "BaseModel.dart";
 
 
 /// The application's document directory for contact avatar image files and database files.
@@ -18,7 +18,7 @@ Directory docsDir;
 /// @param  inContext The BuildContext of the parent Widget.
 /// @return           Future.
 Future selectDate(BuildContext inContext,
-    // BaseModel inModel,
+    BaseModel inModel,
     String inDateString) async {
 
   print("## globals.selectDate()");
@@ -43,7 +43,7 @@ Future selectDate(BuildContext inContext,
 
   // If they didn't cancel, update it in the model so it shows on the screen and return the string form.
   if (picked != null) {
-    // inModel.setChosenDate(DateFormat.yMMMMd("en_US").format(picked.toLocal()));
+    inModel.setChosenDate(DateFormat.yMMMMd("en_US").format(picked.toLocal()));
     return "${picked.year},${picked.month},${picked.day}";
   }
 
