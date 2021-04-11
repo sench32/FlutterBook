@@ -5,7 +5,7 @@ import "package:path_provider/path_provider.dart";
 // import "contacts/Contacts.dart";
 // import "notes/Notes.dart";
 // import "tasks/Tasks.dart";
-// import "utils.dart" as utils;
+import "utils.dart" as utils;
 
 
 /// Start it up!
@@ -15,7 +15,7 @@ void main() {
 
   startMeUp() async {
     Directory docsDir = await getApplicationDocumentsDirectory();
-    // utils.docsDir = docsDir;
+    utils.docsDir = docsDir;
     runApp(FlutterBook());
   }
 
